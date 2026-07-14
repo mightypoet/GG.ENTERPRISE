@@ -112,10 +112,16 @@ export default function App() {
 
       {/* Partners Section */}
       <section id="partners" className="py-20 bg-[#EAF6FF] overflow-hidden">
-        <div className="max-w-5xl mx-auto text-center px-8 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto text-center px-8 mb-12"
+        >
           <h2 className="text-3xl font-bold text-[#003B73] mb-4">Our Partner Companies</h2>
           <p className="text-slate-600">G.G. Enterprise proudly distributes for leading national and global pharmaceutical brands.</p>
-        </div>
+        </motion.div>
         
         <div className="w-full relative">
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#EAF6FF] to-transparent z-10"></div>
@@ -170,7 +176,13 @@ export default function App() {
 
       {/* About Section */}
       <section id="about" className="py-20 px-8 bg-[#F8FAFC]">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16"
+        >
           <div className="w-full md:w-1/2">
             <div className="w-full aspect-square bg-[#EAF6FF] rounded-3xl overflow-hidden relative border border-slate-100 shadow-sm flex items-center justify-center">
               <img 
@@ -190,12 +202,18 @@ export default function App() {
               We partner with leading national and multinational vaccine manufacturers to ensure healthcare providers receive vaccines in perfect condition.
             </p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Why Choose Us & Cold Chain */}
       <section id="cold-chain" className="py-20 px-8 bg-white border-t border-slate-100">
-        <div className="max-w-6xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto"
+        >
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#003B73] mb-4">Why Choose Us</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">Professionally managed distribution house ensuring 100% safety.</p>
@@ -219,11 +237,17 @@ export default function App() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Trust Metrics / Bottom Utility Strip */}
-      <div className="bg-white border-t border-slate-100 p-8 flex flex-col md:flex-row items-center justify-between gap-8 flex-shrink-0 relative z-20">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="bg-white border-t border-slate-100 p-8 flex flex-col md:flex-row items-center justify-between gap-8 flex-shrink-0 relative z-20"
+      >
         <div className="flex items-center gap-6 md:gap-12 w-full md:w-auto justify-center">
           <div className="text-center">
             <p className="text-2xl font-bold text-[#003B73]">30+</p>
@@ -248,7 +272,7 @@ export default function App() {
           <span className="text-sm font-black">SANOFI</span>
           <span className="text-sm font-black text-center">SERUM INSTITUTE</span>
         </div>
-      </div>
+      </motion.div>
 
       {/* Process Timeline */}
       <section className="py-20 px-8 bg-white border-b border-slate-100">
@@ -296,7 +320,13 @@ export default function App() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-8 bg-[#F8FAFC] flex-1">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16"
+        >
           
           {/* Contact Info */}
           <div>
@@ -357,7 +387,7 @@ export default function App() {
             </form>
           </div>
 
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
