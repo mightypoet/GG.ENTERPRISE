@@ -23,8 +23,7 @@ export default function App() {
         <div className="hidden md:flex items-center gap-8 text-[13px] font-semibold text-slate-600">
           <a href="#" className="text-[#003B73]">Home</a>
           <a href="#about" className="hover:text-[#003B73] transition-colors">About</a>
-          <a href="#cold-chain" className="hover:text-[#003B73] transition-colors">Cold Chain</a>
-          <a href="#infrastructure" className="hover:text-[#003B73] transition-colors">Infrastructure</a>
+          <a href="#cold-chain" className="hover:text-[#003B73] transition-colors">Infrastructure</a>
           <a href="#partners" className="hover:text-[#003B73] transition-colors">Partners</a>
           <a href="#contact" className="hover:text-[#003B73] transition-colors">Contact</a>
         </div>
