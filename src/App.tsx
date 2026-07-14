@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory } from 'lucide-react';
+import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory, Award } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function App() {
@@ -240,37 +240,41 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* Trust Metrics / Bottom Utility Strip */}
+      {/* Trust Metrics / Achievement Card */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="bg-white border-t border-slate-100 p-8 flex flex-col md:flex-row items-center justify-between gap-8 flex-shrink-0 relative z-20"
+        className="max-w-5xl mx-auto -mt-12 relative z-20 mb-20 px-8 w-full"
       >
-        <div className="flex items-center gap-6 md:gap-12 w-full md:w-auto justify-center">
-          <div className="text-center">
-            <p className="text-2xl font-bold text-[#003B73]">30+</p>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Years Experience</p>
+        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full">
+          <div className="flex items-center gap-5 md:w-1/3">
+            <div className="w-16 h-16 rounded-full bg-[#EAF6FF] flex items-center justify-center text-[#003B73] shadow-sm flex-shrink-0">
+              <Award className="w-8 h-8" strokeWidth={1.5} />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-[#003B73] mb-1">Our Achievements</h3>
+              <p className="text-[13px] text-slate-500 font-medium leading-relaxed">Delivering excellence in healthcare distribution.</p>
+            </div>
           </div>
-          <div className="h-10 w-[1px] bg-slate-100"></div>
-          <div className="text-center">
-            <p className="text-2xl font-bold text-[#003B73]">14+</p>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Global Partners</p>
+          
+          <div className="flex items-center gap-6 md:gap-12 w-full md:w-2/3 justify-center md:justify-end">
+            <div className="text-center">
+              <p className="text-3xl font-black text-[#003B73]">30+</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Years Exp</p>
+            </div>
+            <div className="h-12 w-[1.5px] bg-slate-100"></div>
+            <div className="text-center">
+              <p className="text-3xl font-black text-[#003B73]">14+</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Partners</p>
+            </div>
+            <div className="h-12 w-[1.5px] bg-slate-100"></div>
+            <div className="text-center">
+              <p className="text-3xl font-black text-[#003B73]">2-8°C</p>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Storage</p>
+            </div>
           </div>
-          <div className="h-10 w-[1px] bg-slate-100"></div>
-          <div className="text-center">
-            <p className="text-2xl font-bold text-[#003B73]">2-8°C</p>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Verified Storage</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 opacity-40 grayscale">
-          <span className="text-sm font-black">Abbott</span>
-          <span className="text-sm font-black">Pfizer</span>
-          <span className="text-sm font-black">GSK</span>
-          <span className="text-sm font-black">SANOFI</span>
-          <span className="text-sm font-black text-center">SERUM INSTITUTE</span>
         </div>
       </motion.div>
 
