@@ -261,15 +261,15 @@ export default function App() {
         >
           <h2 className="text-3xl font-bold text-[#003B73] mb-16">Our Process</h2>
           
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 relative">
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-slate-100 -z-10 -translate-y-1/2"></div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4 relative mt-12">
+            <div className="hidden md:block absolute top-[48px] left-10 right-10 h-0.5 bg-slate-100 -z-10"></div>
             
             {[
-              { step: "Receive Order" },
-              { step: "Cold Storage Handling" },
-              { step: "Temperature Check" },
-              { step: "Safe Packaging" },
-              { step: "Doorstep Delivery" }
+              { step: "Receive Order", img: "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-14%20at%203.14.11%20PM.jpeg" },
+              { step: "Cold Storage Handling", img: "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-14%20at%203.03.54%20PM.jpeg" },
+              { step: "Temperature Check", img: "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-14%20at%203.03.54%20PM%20%281%29.jpeg" },
+              { step: "Safe Packaging", img: "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-14%20at%203.03.53%20PM.jpeg" },
+              { step: "Doorstep Delivery", img: "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-14%20at%203.03.53%20PM%20%281%29.jpeg" }
             ].map((item, i) => (
               <motion.div 
                 key={i} 
@@ -277,12 +277,18 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="flex flex-col items-center gap-4 bg-white px-4"
+                className="flex flex-col items-center gap-4 bg-white px-2 z-10"
               >
-                <div className="w-10 h-10 rounded-full bg-[#DFF7F5] border-4 border-white shadow-sm flex items-center justify-center text-[#1B8B42]">
-                  <CheckCircle2 size={20} />
+                <div className="w-24 h-24 rounded-full bg-slate-100 border-4 border-white shadow-md overflow-hidden relative group">
+                  <img src={item.img} alt={item.step} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-full"></div>
                 </div>
-                <p className="text-[13px] font-bold text-slate-700 w-24">{item.step}</p>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-[#1B8B42] text-white flex items-center justify-center -mt-8 relative z-20 border-2 border-white shadow-sm">
+                    <CheckCircle2 size={12} strokeWidth={3} />
+                  </div>
+                  <p className="text-[13px] font-bold text-slate-700 w-28 mt-2">{item.step}</p>
+                </div>
               </motion.div>
             ))}
           </div>
