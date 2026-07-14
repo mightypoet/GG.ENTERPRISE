@@ -2,6 +2,22 @@ import React, { useState } from 'react';
 import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory, Award } from 'lucide-react';
 import { motion } from 'motion/react';
 
+const PARTNERS = [
+  { name: "Abbott", domain: "abbott.com", img: "https://logoeps.com/wp-content/uploads/2016/06/Abbott-logo-1.png" },
+  { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
+  { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
+  { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
+  { name: "GSK", domain: "gsk.com", img: "https://qtxasset.com/quartz/qcloud5/media/image/fiercebiotech/1611322346/gsk-logo.jpg?VersionId=guTF1Vor.dddCrF7Gx.sRb_Uw1g4ERRV" },
+  { name: "MSD", domain: "msd.com", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Merck_Sharp_%26_Dohme_%28MSD%29.svg/960px-Merck_Sharp_%26_Dohme_%28MSD%29.svg.png?_=20220211113800" },
+  { name: "Panacea Biotec", domain: "panaceabiotec.com", img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Panacea_Biotec_Logo.svg/1280px-Panacea_Biotec_Logo.svg.png" },
+  { name: "Pfizer", domain: "pfizer.com", img: "https://team.design/wp-content/uploads/2022/08/03_Pfizer_Logo.png" },
+  { name: "Sanofi", domain: "sanofi.com", img: "https://images.seeklogo.com/logo-png/24/1/sanofi-logo-png_seeklogo-241329.png" },
+  { name: "Serum Institute", domain: "seruminstitute.com", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRTak-eHS-EktsXzyTFp9guShP8ZrKvAKja3kzz7TQ5sjQL0yy-9yi4ow&s=10" },
+  { name: "Wockhardt", domain: "wockhardt.com", img: "https://static.wixstatic.com/media/1b134f_082f6de6917e431ab3915ee6a724fbd1~mv2.png" },
+  { name: "Zuventus", domain: "zuventus.co.in", img: "https://www.zuventus.com/sites/default/files/2023-02/logo.png" },
+  { name: "Zydus", domain: "zyduslife.com", img: "https://zyduslife.com/public/images/corporate-logo.jpg" }
+];
+
 export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -147,39 +163,12 @@ export default function App() {
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#EAF6FF] to-transparent z-10"></div>
           
           <div className="animate-marquee gap-6 py-4">
-            {[
-              { name: "Abbott", domain: "abbott.com", img: "https://toppng.com/uploads/preview/abbott-logo-11530964671kodfjybebk.png" },
-              { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
-              { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
-              { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
-              { name: "GSK", domain: "gsk.com" },
-              { name: "MSD", domain: "msd.com" },
-              { name: "Panacea Biotec", domain: "panaceabiotec.com" },
-              { name: "Pfizer", domain: "pfizer.com" },
-              { name: "Sanofi", domain: "sanofi.com" },
-              { name: "Serum Institute", domain: "seruminstitute.com" },
-              { name: "Wockhardt", domain: "wockhardt.com" },
-              { name: "Zuventus", domain: "zuventus.co.in" },
-              { name: "Zydus", domain: "zyduslife.com" }
-            ].concat([
-              { name: "Abbott", domain: "abbott.com", img: "https://toppng.com/uploads/preview/abbott-logo-11530964671kodfjybebk.png" },
-              { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
-              { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
-              { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
-              { name: "GSK", domain: "gsk.com" },
-              { name: "MSD", domain: "msd.com" },
-              { name: "Panacea Biotec", domain: "panaceabiotec.com" },
-              { name: "Pfizer", domain: "pfizer.com" },
-              { name: "Sanofi", domain: "sanofi.com" },
-              { name: "Serum Institute", domain: "seruminstitute.com" },
-              { name: "Wockhardt", domain: "wockhardt.com" },
-              { name: "Zuventus", domain: "zuventus.co.in" },
-              { name: "Zydus", domain: "zyduslife.com" }
-            ]).map((partner, i) => (
+            {PARTNERS.concat(PARTNERS).map((partner, i) => (
               <div key={i} className="flex-shrink-0 flex items-center justify-center w-[220px] h-[100px] bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-shadow group">
                 <img 
-                  src={partner.img || `https://logo.clearbit.com/${partner.domain}`} 
-                  alt={partner.name} 
+                  src={partner.img || `https://icon.horse/icon/${partner.domain}`} 
+                  alt={partner.name}
+                  referrerPolicy="no-referrer"
                   className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
