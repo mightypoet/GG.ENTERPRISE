@@ -40,7 +40,6 @@ export default function App() {
           <div className="relative flex items-center justify-center w-10 h-10 rounded-full border-[2.5px] border-[#003B73] bg-white">
             <span className="text-[#003B73] font-black text-xl -mr-0.5">G</span>
             <span className="text-[#1B8B42] font-black text-xl">G</span>
-            <span className="absolute -right-2 top-0 text-[#003B73] font-black text-sm">+</span>
           </div>
           <div className="flex flex-col ml-1">
             <h1 className="text-[15px] font-black text-[#003B73] leading-none uppercase tracking-wide">G.G. Enterprise</h1>
@@ -105,14 +104,6 @@ export default function App() {
             <a href="#contact" className="px-8 py-4 bg-[#003B73] text-white rounded-2xl font-bold text-[15px] shadow-lg shadow-blue-200 hover:scale-105 transition-transform">
               Contact Us Now
             </a>
-            <div className="flex flex-col gap-1 hidden sm:flex">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-200"></div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-300"></div>
-                <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-400"></div>
-              </div>
-              <p className="text-[11px] text-slate-500 font-medium italic">Trusted by Healthcare Centers</p>
-            </div>
           </motion.div>
         </div>
 
@@ -122,7 +113,7 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full max-w-[500px] bg-slate-100 rounded-[32px] overflow-hidden relative shadow-2xl border-8 border-white"
+            className="w-full max-w-[440px] h-[400px] md:h-[480px] mx-auto bg-slate-100 rounded-[32px] overflow-hidden relative shadow-2xl border-8 border-white"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white z-20">
@@ -131,7 +122,7 @@ export default function App() {
             <img 
               src="https://i.pinimg.com/736x/76/dd/d1/76ddd1786e18964dc4adea03bdd00b14.jpg" 
               alt="Vaccines" 
-              className="w-full h-auto object-contain relative z-0" 
+              className="w-full h-full object-cover object-top relative z-0" 
               referrerPolicy="no-referrer"
             />
           </motion.div>
@@ -274,33 +265,21 @@ export default function App() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl mx-auto -mt-12 relative z-20 mb-20 px-8 w-full"
+        className="max-w-5xl mx-auto -mt-12 relative z-20 mb-20 px-4 sm:px-8 w-full"
       >
-        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full">
-          <div className="flex items-center gap-5 md:w-1/3">
-            <div className="w-16 h-16 rounded-full bg-[#EAF6FF] flex items-center justify-center text-[#003B73] shadow-sm flex-shrink-0">
-              <Award className="w-8 h-8" strokeWidth={1.5} />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-[#003B73] mb-1">Our Achievements</h3>
-              <p className="text-[13px] text-slate-500 font-medium leading-relaxed">Delivering excellence in healthcare distribution.</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-6 md:gap-12 w-full md:w-2/3 justify-center md:justify-end">
+        <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 md:p-10 flex w-full">
+          <div className="grid grid-cols-3 gap-2 md:gap-10 w-full divide-x divide-slate-100 items-center justify-center">
             <div className="text-center">
-              <p className="text-3xl font-black text-[#003B73]">30+</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Years Exp</p>
+              <p className="text-xl sm:text-3xl font-black text-[#003B73]">30+</p>
+              <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1 leading-tight">Years Exp</p>
             </div>
-            <div className="h-12 w-[1.5px] bg-slate-100"></div>
             <div className="text-center">
-              <p className="text-3xl font-black text-[#003B73]">14+</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Partners</p>
+              <p className="text-xl sm:text-3xl font-black text-[#003B73]">14+</p>
+              <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1 leading-tight">Partners</p>
             </div>
-            <div className="h-12 w-[1.5px] bg-slate-100"></div>
             <div className="text-center">
-              <p className="text-3xl font-black text-[#003B73]">2-8°C</p>
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Storage</p>
+              <p className="text-xl sm:text-3xl font-black text-[#003B73]">2-8°C</p>
+              <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1 leading-tight">Storage</p>
             </div>
           </div>
         </div>
@@ -368,7 +347,9 @@ export default function App() {
                 <MapPin className="text-[#1B8B42] shrink-0" />
                 <div>
                   <h4 className="font-bold text-slate-800 mb-1">Regd. Office</h4>
-                  <p>86B, Dhan Devi Khanna Road<br/>Kolkata – 700054</p>
+                  <a href="https://maps.google.com/?q=86B,+Dhan+Devi+Khanna+Road,+Kolkata+-+700054" target="_blank" rel="noopener noreferrer" className="hover:text-[#003B73] hover:underline transition-colors block">
+                    86B, Dhan Devi Khanna Road<br/>Kolkata – 700054
+                  </a>
                 </div>
               </div>
               <div className="flex gap-4">
