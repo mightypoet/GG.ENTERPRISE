@@ -3,6 +3,34 @@ import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical,
 import { motion } from 'motion/react';
 
 export default function App() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwYsmni-Z7FAo7GPFGKx1N2B1WmsHXCliFtQqUQgwA14m-mzeagqweZXwnhHKiiTaRo/exec', {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (response.ok) {
+        alert('Enquiry submitted successfully!');
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans flex flex-col text-slate-800">
       
@@ -129,10 +157,10 @@ export default function App() {
           
           <div className="animate-marquee gap-6 py-4">
             {[
-              { name: "Abbott", domain: "abbott.com" },
-              { name: "Bharat Biotech", domain: "bharatbiotech.com" },
-              { name: "Biological E.", domain: "biologicale.com" },
-              { name: "Ferring", domain: "ferring.com" },
+              { name: "Abbott", domain: "abbott.com", img: "https://toppng.com/uploads/preview/abbott-logo-11530964671kodfjybebk.png" },
+              { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
+              { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
+              { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
               { name: "GSK", domain: "gsk.com" },
               { name: "MSD", domain: "msd.com" },
               { name: "Panacea Biotec", domain: "panaceabiotec.com" },
@@ -143,10 +171,10 @@ export default function App() {
               { name: "Zuventus", domain: "zuventus.co.in" },
               { name: "Zydus", domain: "zyduslife.com" }
             ].concat([
-              { name: "Abbott", domain: "abbott.com" },
-              { name: "Bharat Biotech", domain: "bharatbiotech.com" },
-              { name: "Biological E.", domain: "biologicale.com" },
-              { name: "Ferring", domain: "ferring.com" },
+              { name: "Abbott", domain: "abbott.com", img: "https://toppng.com/uploads/preview/abbott-logo-11530964671kodfjybebk.png" },
+              { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
+              { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
+              { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
               { name: "GSK", domain: "gsk.com" },
               { name: "MSD", domain: "msd.com" },
               { name: "Panacea Biotec", domain: "panaceabiotec.com" },
@@ -159,7 +187,7 @@ export default function App() {
             ]).map((partner, i) => (
               <div key={i} className="flex-shrink-0 flex items-center justify-center w-[220px] h-[100px] bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-shadow group">
                 <img 
-                  src={`https://logo.clearbit.com/${partner.domain}`} 
+                  src={partner.img || `https://logo.clearbit.com/${partner.domain}`} 
                   alt={partner.name} 
                   className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
                   onError={(e) => {
@@ -370,23 +398,23 @@ export default function App() {
           {/* Enquiry Form */}
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="text-xl font-bold text-slate-800 mb-6">Send Enquiry</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
-                <input type="text" placeholder="Hospital / Clinic Name" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
+                <input type="text" name="hospitalName" placeholder="Hospital / Clinic Name" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Contact Person" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
-                <input type="tel" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
+                <input type="text" name="contactPerson" placeholder="Contact Person" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
+                <input type="tel" name="mobile" placeholder="Mobile Number" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" />
-                <input type="text" placeholder="City" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
+                <input type="email" name="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" />
+                <input type="text" name="city" placeholder="City" className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required />
               </div>
               <div>
-                <textarea placeholder="Your Requirement / Message" rows={4} className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required></textarea>
+                <textarea name="message" placeholder="Your Requirement / Message" rows={4} className="w-full px-4 py-3 rounded-xl bg-[#F8FAFC] border border-slate-200 focus:outline-none focus:border-[#003B73] text-sm" required></textarea>
               </div>
-              <button type="submit" className="w-full py-4 bg-[#003B73] text-white rounded-xl font-bold hover:bg-blue-900 transition-colors">
-                Submit Enquiry
+              <button type="submit" disabled={isSubmitting} className="w-full py-4 bg-[#003B73] text-white rounded-xl font-bold hover:bg-blue-900 transition-colors disabled:opacity-70 disabled:cursor-not-allowed">
+                {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
               </button>
             </form>
           </div>
