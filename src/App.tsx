@@ -84,15 +84,6 @@ export default function App() {
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row bg-gradient-to-br from-[#EAF6FF] to-white relative overflow-hidden min-h-[600px]">
         <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DFF7F5] text-[#1B8B42] text-[11px] font-bold uppercase tracking-wider mb-6 w-fit"
-          >
-            <span className="w-2 h-2 rounded-full bg-[#1B8B42] animate-pulse"></span>
-            30+ Years of Excellence
-          </motion.div>
-          
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -108,7 +99,7 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg"
           >
-            Over 30 years of excellence in vaccine storage, cold-chain management and doorstep delivery for hospitals, clinics and healthcare providers.
+            Team over 30 years of excellence in vaccine storage, cold-chain management and doorstep delivery for hospitals, clinics and healthcare providers.
           </motion.p>
           
           <motion.div 
@@ -204,7 +195,7 @@ export default function App() {
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-bold text-[#003B73] mb-6">About GG Enterprise</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              G.G. Enterprise is one of Kolkata's trusted vaccine distribution houses with nearly three decades of experience in supplying vaccines safely while maintaining strict cold-chain standards.
+              G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with nearly three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
             </p>
             <p className="text-slate-600 leading-relaxed">
               We partner with leading national and multinational vaccine manufacturers to ensure healthcare providers receive vaccines in perfect condition.
