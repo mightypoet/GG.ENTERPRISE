@@ -91,7 +91,7 @@ export default function App() {
             transition={{ delay: 0.1 }}
             className="font-serif text-4xl md:text-5xl font-bold text-[#002855] leading-[1.1] mb-6"
           >
-            Trusted Vaccine <br/>Distribution Across <br/><span className="text-[#FDB813]">Eastern India</span>
+            Trusted Vaccine <br/>Distribution House in <br/><span className="text-[#FDB813]">Eastern India</span>
           </motion.h2>
           
           <motion.p 
@@ -100,7 +100,7 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg"
           >
-            Team over 30 years of excellence in vaccine storage, cold-chain management and doorstep delivery for hospitals, clinics and healthcare providers.
+            Team over 30 years of experience in vaccine storage, cold-chain management and doorstep delivery for hospitals, clinics and healthcare providers.
           </motion.p>
           
           <motion.div 
@@ -147,7 +147,7 @@ export default function App() {
           className="max-w-5xl mx-auto text-center px-8 mb-12"
         >
           <h2 className="font-serif text-3xl font-bold text-[#002855] mb-4">Our Partner Companies</h2>
-          <p className="text-slate-600">G.G. Enterprise proudly distributes for leading national and global pharmaceutical brands.</p>
+          <p className="text-slate-600">G.G. Enterprise proudly distributes for leading global and national vaccine brands.</p>
         </motion.div>
         
         <div className="w-full relative">
@@ -196,7 +196,7 @@ export default function App() {
           <div className="w-full md:w-1/2">
             <h2 className="font-serif text-3xl font-bold text-[#002855] mb-6">About GG Enterprise</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with nearly three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
+              G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with more than three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
             </p>
             <p className="text-slate-600 leading-relaxed">
               We partner with leading national and multinational vaccine manufacturers to ensure healthcare providers receive vaccines in perfect condition.
