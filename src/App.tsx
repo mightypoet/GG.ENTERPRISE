@@ -186,7 +186,7 @@ export default function App() {
           <div className="w-full md:w-1/2">
             <div className="w-full aspect-square bg-[#FFFDF0] rounded-3xl overflow-hidden relative border border-slate-100 shadow-sm flex items-center justify-center">
               <img 
-                src="https://i.pinimg.com/736x/10/e7/e3/10e7e343d347440fc75283645897af5f.jpg" 
+                src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2018%2C%202026%2C%2004_38_09%20PM.png" 
                 alt="About GG Enterprise" 
                 className="w-full h-full object-cover" 
                 referrerPolicy="no-referrer"
