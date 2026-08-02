@@ -6,7 +6,6 @@ const PARTNERS = [
   { name: "Abbott", domain: "abbott.com", img: "https://logoeps.com/wp-content/uploads/2016/06/Abbott-logo-1.png" },
   { name: "Bharat Biotech", domain: "bharatbiotech.com", img: "https://www.bharatbiotech.com/images/bharat-biotech-logo.jpg" },
   { name: "Biological E.", domain: "biologicale.com", img: "https://curetechgroup.in/wp-content/uploads/2023/09/22.png" },
-  { name: "Ferring", domain: "ferring.com", img: "https://d2gohj824v350l.cloudfront.net/wp-content/uploads/sites/16/2024/01/12104451/Ferring-logo-7.png" },
   { name: "GSK", domain: "gsk.com", img: "https://qtxasset.com/quartz/qcloud5/media/image/fiercebiotech/1611322346/gsk-logo.jpg?VersionId=guTF1Vor.dddCrF7Gx.sRb_Uw1g4ERRV" },
   { name: "MSD", domain: "msd.com", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Merck_Sharp_%26_Dohme_%28MSD%29.svg/960px-Merck_Sharp_%26_Dohme_%28MSD%29.svg.png?_=20220211113800" },
   { name: "Panacea Biotec", domain: "panaceabiotec.com", img: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Panacea_Biotec_Logo.svg/1280px-Panacea_Biotec_Logo.svg.png" },
@@ -15,7 +14,11 @@ const PARTNERS = [
   { name: "Serum Institute", domain: "seruminstitute.com", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRTak-eHS-EktsXzyTFp9guShP8ZrKvAKja3kzz7TQ5sjQL0yy-9yi4ow&s=10" },
   { name: "Wockhardt", domain: "wockhardt.com", img: "https://static.wixstatic.com/media/1b134f_082f6de6917e431ab3915ee6a724fbd1~mv2.png" },
   { name: "Zuventus", domain: "zuventus.co.in", img: "https://www.zuventus.com/sites/default/files/2023-02/logo.png" },
-  { name: "Zydus", domain: "zyduslife.com", img: "https://zyduslife.com/public/images/corporate-logo.jpg" }
+  { name: "Zydus", domain: "zyduslife.com", img: "https://zyduslife.com/public/images/corporate-logo.jpg" },
+  { name: "Novo Nordisk", domain: "novonordisk.com", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGOJSVtxPCx_c0L9fIQ02xIwLd21DZR7sRlBLXL8vcHw&s" },
+  { name: "Dr. Reddy's", domain: "drreddys.com", img: "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Dr._Reddy%27s_Laboratories_logo.svg/1280px-Dr._Reddy%27s_Laboratories_logo.svg.png" },
+  { name: "Lupin", domain: "lupin.com", img: "https://upload.wikimedia.org/wikipedia/en/f/f7/The_Lupin_Logo.svg" },
+  { name: "Indian Immunologicals", domain: "indimmune.com", img: "https://upload.wikimedia.org/wikipedia/en/1/19/IIL_India_logo.jpg" }
 ];
 
 export default function App() {
@@ -146,7 +149,7 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto text-center px-8 mb-12"
         >
-          <h2 className="font-serif text-3xl font-bold text-[#002855] mb-4">Our Partner Companies</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#002855] mb-4">Distributers of</h2>
           <p className="text-slate-600">G.G. Enterprise proudly distributes for leading global and national vaccine brands.</p>
         </motion.div>
         
