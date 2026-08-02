@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory, Award } from 'lucide-react';
+import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory, Award, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const PARTNERS = [
@@ -334,6 +334,52 @@ export default function App() {
         </motion.div>
       </section>
 
+      {/* Achievements & Rewards */}
+      <section id="achievements" className="py-20 px-8 bg-white border-t border-slate-100">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto text-center"
+        >
+          <h2 className="font-serif text-3xl font-bold text-[#002855] mb-16">Achievements & Rewards</h2>
+          
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-10 relative mt-12">
+            {[
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.54%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.53%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.52%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.39%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.38%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.37%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.33%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.34%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.35%20PM.jpeg",
+              "https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-01%20at%206.12.35%20PM.jpeg"
+            ].map((img, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex flex-col items-center gap-4 bg-white px-2 z-10"
+              >
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-slate-100 border-4 border-white shadow-md overflow-hidden relative group">
+                  <img src={img} alt={`Achievement ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl"></div>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-[#FDB813] text-white flex items-center justify-center -mt-8 relative z-20 border-2 border-white shadow-sm">
+                    <Award size={12} strokeWidth={3} />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-8 bg-[#F8FAFC] flex-1">
         <motion.div 
@@ -413,10 +459,23 @@ export default function App() {
         <div>
           © {new Date().getFullYear()} <span className="font-bold text-white">G.G. Enterprise</span> - All Rights Reserved. Regd. Office: 86B, Dhan Devi Khanna Road, Kolkata – 700054
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
-          <span>Phone: 033-23628572</span>
-          <span className="hidden md:block w-1 h-1 bg-slate-300 rounded-full"></span>
-          <span>Email: ggenterprise86@gmail.com</span>
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+            <span>Phone: 033-23628572</span>
+            <span className="hidden md:block w-1 h-1 bg-slate-400 rounded-full"></span>
+            <span>Email: ggenterprise86@gmail.com</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <Facebook size={16} />
+            </a>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <Instagram size={16} />
+            </a>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <Linkedin size={16} />
+            </a>
+          </div>
         </div>
       </footer>
 
