@@ -199,7 +199,7 @@ export default function App() {
           <div className="w-full md:w-1/2">
             <h2 className="font-serif text-3xl font-bold text-[#002855] mb-6">About GG Enterprise</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with more than three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
+              G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with a team of more than three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
             </p>
             <p className="text-slate-600 leading-relaxed">
               We partner with leading national and multinational vaccine manufacturers to ensure healthcare providers receive vaccines in perfect condition.
@@ -328,7 +328,7 @@ export default function App() {
           </p>
           <div className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-slate-100">
             <img 
-              src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-15%20at%209.17.16%20PM.jpeg" 
+              src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-05%20at%2012.46.50%20PM.jpeg" 
               alt="G.G. Enterprise Team" 
               className="w-full h-auto object-cover"
               referrerPolicy="no-referrer"
