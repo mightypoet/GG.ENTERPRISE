@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Phone, Mail, MapPin, Truck, Thermometer, BriefcaseMedical, CheckCircle2, Factory, Award, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -21,8 +21,21 @@ const PARTNERS = [
   { name: "Indian Immunologicals", domain: "indimmune.com", img: "https://upload.wikimedia.org/wikipedia/en/1/19/IIL_India_logo.jpg" }
 ];
 
+const heroSlides = [
+  "https://40rtlqterhis3blw.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2018%2C%202026%2C%2001_45_39%20PM.png",
+  "https://40rtlqterhis3blw.public.blob.vercel-storage.com/ChatGPT%20Image%20Sep%205%2C%202026%2C%2005_18_09%20PM.png"
+];
+
 export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -130,12 +143,19 @@ export default function App() {
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white z-20">
               <p className="text-sm italic opacity-90 font-medium text-center">"Safety and integrity in every dose we deliver."</p>
             </div>
-            <img 
-              src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2018%2C%202026%2C%2001_45_39%20PM.png" 
-              alt="Vaccines" 
-              className="w-full h-full object-cover object-top relative z-0" 
-              referrerPolicy="no-referrer"
-            />
+            <div className="absolute inset-0 z-0">
+              {heroSlides.map((slide, idx) => (
+                <img 
+                  key={idx}
+                  src={slide}
+                  alt={`Slide ${idx + 1}`} 
+                  className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 ${
+                    idx === currentSlideIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  referrerPolicy="no-referrer"
+                />
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
@@ -190,14 +210,14 @@ export default function App() {
             <div className="w-full aspect-square bg-[#FFFDF0] rounded-3xl overflow-hidden relative border border-slate-100 shadow-sm flex items-center justify-center">
               <img 
                 src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/ChatGPT%20Image%20Jul%2018%2C%202026%2C%2004_38_09%20PM.png" 
-                alt="About GG Enterprise" 
+                alt="About G.G. Enterprise" 
                 className="w-full h-full object-cover" 
                 referrerPolicy="no-referrer"
               />
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="font-serif text-3xl font-bold text-[#002855] mb-6">About GG Enterprise</h2>
+            <h2 className="font-serif text-3xl font-bold text-[#002855] mb-6">About G.G. Enterprise</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
               G.G. Enterprise is one of West Bengal's trusted vaccine distribution companies, with a team of more than three decades of experience in the safe and reliable supply of vaccines. Committed to maintaining stringent cold-chain standards throughout the distribution process, the company ensures the quality, efficacy, and integrity of every vaccine it delivers.
             </p>
