@@ -348,7 +348,7 @@ export default function App() {
           </p>
           <div className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-lg border border-slate-100">
             <img 
-              src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-08-05%20at%2012.46.50%20PM.jpeg" 
+              src="https://40rtlqterhis3blw.public.blob.vercel-storage.com/WhatsApp%20Image%202026-09-07%20at%2011.25.16%20AM.jpeg" 
               alt="G.G. Enterprise Team" 
               className="w-full h-auto object-cover"
               referrerPolicy="no-referrer"

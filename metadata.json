@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "G.G. Enterprise",
+  "description": "G.G. Enterprise - The House of Vaccines",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
